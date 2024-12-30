@@ -1,6 +1,10 @@
 // fonts
 import { geistMono, geistSans } from '@/app/_libs/fonts'
 
+// components
+import { Header } from '@/app/_components/molecules/header'
+import { Footer } from '@/app/_components/molecules/footer'
+
 // styles
 import './globals.css'
 
@@ -21,7 +25,11 @@ type RootLayoutProps = {
 const RootLayout: FC<RootLayoutProps> = ({ children }) => (
   <html lang='en'>
     <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-      {children}
+      <main className='flex flex-col flex-1 gap-8 min-h-screen'>
+        <Header />
+        <div className='w-full flex flex-col items-center px-4'>{children}</div>
+        <Footer />
+      </main>
     </body>
   </html>
 )

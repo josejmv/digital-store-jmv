@@ -6,7 +6,7 @@ import Link from 'next/link'
 import type { FC } from 'react'
 
 export const Footer: FC = () => (
-  <footer className='w-full h-44 bg-secondary-content flex justify-center items-center'>
+  <footer className='w-full mt-auto h-44 bg-secondary-content flex justify-center items-center'>
     <Link href='/'>
       <Image
         width={170}
