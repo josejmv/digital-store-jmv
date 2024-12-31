@@ -8,7 +8,7 @@ import Image from 'next/image'
 import type { GameDataType } from '@/app/_types/models/game'
 import type { FC } from 'react'
 
-const GameCard: FC<GameDataType> = (props) => {
+export const GameCard: FC<GameDataType> = (props) => {
   const handleAddToCar = () => console.log('added')
 
   return (
@@ -35,5 +35,3 @@ const GameCard: FC<GameDataType> = (props) => {
     </div>
   )
 }
-
-export default GameCard
