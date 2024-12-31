@@ -84,7 +84,7 @@ export const GamesView: FC<GamesViewProps> = ({ params }) => {
         ))}
         {(!games || loading) && <LoadingGames />}
       </div>
-      {filter.page < filter.total && (
+      {!params.genre && filter.page < filter.total && (
         <Button loading={loading} className='mt-2' onClick={handleNextPage}>
           Load More
         </Button>
