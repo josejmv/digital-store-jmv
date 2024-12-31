@@ -1,3 +1,4 @@
+// data
 import { availableFilters, delay } from '@/app/_utils/endpoint'
 
 export async function GET() {

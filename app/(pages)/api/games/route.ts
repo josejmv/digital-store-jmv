@@ -1,3 +1,4 @@
+// data
 import { allGames, delay } from '@/app/_utils/endpoint'
 
 const ITEMS_PER_PAGE = 12

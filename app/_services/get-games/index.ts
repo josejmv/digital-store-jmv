@@ -1,5 +1,6 @@
-import type { SearchParamsDataType } from '@/app/_types'
+// types
 import type { GameDataType } from '@/app/_types/models/game'
+import type { SearchParamsDataType } from '@/app/_types'
 
 type getGamesArgs = {
   page: number
@@ -10,7 +11,7 @@ type getGamesArgs = {
  * Get games from the API
  */
 export const getGames = async (args: getGamesArgs) => {
-  let url = `/api/games?page=${args.page}`
+  let url = `${process.env.NEXT_PUBLIC_BASE_API_URL}/games?page=${args.page}`
   const searchParams = new URLSearchParams()
   Object.entries(args.params).forEach(([key, value]) => {
     if (Array.isArray(value))

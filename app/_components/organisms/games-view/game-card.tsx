@@ -16,16 +16,16 @@ export const GameCard: FC<GameDataType> = (props) => {
     const cart = localStorage.getItem('cart')
 
     if (!cart) return false
-    return JSON.parse(cart).some((id: string) => id === props.id)
+    return JSON.parse(cart).some((game: GameDataType) => game.id === props.id)
   })
 
   const handleAddToCart = () => {
     const cart = localStorage.getItem('cart')
 
-    if (!cart) localStorage.setItem('cart', JSON.stringify([props.id]))
+    if (!cart) localStorage.setItem('cart', JSON.stringify([{ ...props }]))
     else {
       const parsedCart = JSON.parse(cart)
-      if (!inCart) parsedCart.push(props.id)
+      if (!inCart) parsedCart.push({ ...props })
       else parsedCart.splice(parsedCart.indexOf(props.id), 1)
 
       localStorage.setItem('cart', JSON.stringify(parsedCart))
@@ -44,6 +44,14 @@ export const GameCard: FC<GameDataType> = (props) => {
           alt={`game name: ${props.name}`}
           className='bg-red-500 rounded-t-xl object-cover'
         />
+        {props.isNew && (
+          <Button
+            color='SECONDARY'
+            className='absolute top-2 left-2 cursor-default font-medium'
+          >
+            NEW
+          </Button>
+        )}
       </div>
       <span className='font-bold text-base text-neutral-500'>
         {props.genre}

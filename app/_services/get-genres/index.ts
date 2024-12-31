@@ -1,4 +1,4 @@
 export const getGenres = () =>
-  fetch('/api/genres').then((res) => res.json()) as Promise<{
-    genres: string[]
-  }>
+  fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/genres`).then((res) =>
+    res.json()
+  ) as Promise<{ genres: string[] }>
