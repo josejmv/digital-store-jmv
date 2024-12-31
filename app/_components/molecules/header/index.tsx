@@ -17,8 +17,8 @@ export const Header: FC = () => (
           alt='Apply Digital Logo'
         />
       </Link>
-      <Link href='/car'>
-        <Image width={20} height={20} alt='Car Logo' src='/icons/car.svg' />
+      <Link href='/cart'>
+        <Image width={20} height={20} alt='Cart Logo' src='/icons/cart.svg' />
       </Link>
     </section>
   </header>

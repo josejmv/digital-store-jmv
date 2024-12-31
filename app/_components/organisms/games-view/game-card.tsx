@@ -9,7 +9,7 @@ import type { GameDataType } from '@/app/_types/models/game'
 import type { FC } from 'react'
 
 export const GameCard: FC<GameDataType> = (props) => {
-  const handleAddToCar = () => console.log('added')
+  const handleAddToCart = () => console.log('added')
 
   return (
     <div className='w-full h-full rounded-xl border border-secondary-stroke p-6 flex flex-col justify-between gap-3'>
@@ -29,8 +29,8 @@ export const GameCard: FC<GameDataType> = (props) => {
         <p className='text-lg'>{props.name}</p>
         <p className='text-xl'>{props.price}$</p>
       </div>
-      <Button onClick={handleAddToCar} variant='OUTLINE' color='SECONDARY'>
-        Add to Car
+      <Button onClick={handleAddToCart} variant='OUTLINE' color='SECONDARY'>
+        Add to Cart
       </Button>
     </div>
   )
