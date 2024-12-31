@@ -10,6 +10,7 @@ export default {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
         'primary-content': 'var(--primary-content)',
+        'secondary-stroke': 'var(--secondary-stroke)',
         'secondary-content': 'var(--secondary-content)',
       },
     },
