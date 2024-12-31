@@ -11,9 +11,9 @@ export const buttonVariants = Object.freeze({
   },
   OUTLINE: {
     PRIMARY:
-      'text-primary border-primary border-solid border-2 bg-transparent hover:bg-primary hover:text-primary-content',
+      'text-primary border-primary border-solid border bg-transparent hover:bg-primary hover:text-primary-content',
     SECONDARY:
-      'text-secondary-content border-secondary-content border-solid border-2 bg-transparent hover:bg-secondary hover:border-secondary hover:text-secondary-content',
+      'text-secondary-content border-secondary-content border-solid border bg-transparent hover:bg-secondary hover:border-secondary hover:text-secondary-content',
   },
   GHOST: {
     PRIMARY: 'text-primary decoration-primary',

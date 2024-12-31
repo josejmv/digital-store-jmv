@@ -1,4 +1,4 @@
-export type Game = {
+export type GameDataType = {
   id: string
   name: string
   genre: string

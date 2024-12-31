@@ -1,8 +1,8 @@
 // types
-import type { Game } from '@/app/_types/models/game'
+import type { GameDataType } from '@/app/_types/models/game'
 
 // Mock games data
-export const allGames: Game[] = [
+export const allGames: GameDataType[] = [
   {
     id: '1',
     genre: 'Action',

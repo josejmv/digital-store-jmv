@@ -26,7 +26,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       ref={ref}
       disabled={loading}
       className={twMerge(
-        'border-none break-words font-sans rounded-lg flex justify-center items-center transition-colors ease-in p-2 disabled:opacity-50 disabled:cursor-not-allowed',
+        'border-none break-words text-base font-bold font-sans rounded-lg flex justify-center items-center transition-colors ease-in p-2 disabled:opacity-50 disabled:cursor-not-allowed',
         buttonDimensions[size],
         buttonVariants[variant][color],
         underlineVisible ? 'underline' : '!no-underline',
