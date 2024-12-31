@@ -6,8 +6,10 @@ import { useEffect, useState } from 'react'
 // components
 import { Button } from '@/app/_components/atoms/button'
 import { ShowGenresButton } from './show-genres-button'
-import { LoadingGames } from './loader'
+import { LoadingGames } from './loading-games'
+import { GenresList } from './genres-list'
 import { GameCard } from './game-card'
+import Link from 'next/link'
 
 // services
 import { getGames } from '@/app/_services/get-games'
@@ -16,7 +18,6 @@ import { getGames } from '@/app/_services/get-games'
 import type { GameDataType } from '@/app/_types/models/game'
 import type { SearchParamsDataType } from '@/app/_types'
 import type { FC } from 'react'
-import Link from 'next/link'
 
 type GamesViewProps = {
   params: SearchParamsDataType
@@ -37,12 +38,21 @@ export const GamesView: FC<GamesViewProps> = ({ params }) => {
   useEffect(() => {
     ;(async () => {
       setLoading(true)
+      if (params.genre) setGames(undefined)
+
       const { games, currentPage, totalPages } = await getGames({
         params,
         page: filter.page,
       })
 
-      setGames((prev) => (prev ? [...prev, ...games] : games))
+      setGames((prev) => {
+        if (!prev) return games
+
+        const gamesToAdd = games.filter(
+          (item) => !prev.some((game) => game.id === item.id)
+        )
+        return [...prev, ...gamesToAdd]
+      })
       setFilter({ page: currentPage, total: totalPages })
       setLoading(false)
     })()
@@ -67,6 +77,7 @@ export const GamesView: FC<GamesViewProps> = ({ params }) => {
           handleShowGenres={handleShowGenres}
         />
       </div>
+      {showGenres && <GenresList />}
       <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8'>
         {games?.map((game) => (
           <GameCard key={game.id} {...game} />
