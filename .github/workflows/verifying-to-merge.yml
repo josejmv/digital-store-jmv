@@ -25,9 +25,6 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Nx SHAs
-        uses: nrwl/nx-set-shas@v3
-
       - name: Install dependencies
         run: yarn install
 
