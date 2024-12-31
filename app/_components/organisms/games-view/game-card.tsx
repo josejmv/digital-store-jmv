@@ -1,7 +1,7 @@
 'use client'
 
 // main tools
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 // components
 import { Button } from '@/app/_components/atoms/button'
@@ -12,27 +12,33 @@ import type { GameDataType } from '@/app/_types/models/game'
 import type { FC } from 'react'
 
 export const GameCard: FC<GameDataType> = (props) => {
-  const [inCart, setInCart] = useState(() => {
-    const cart = localStorage.getItem('cart')
-
-    if (!cart) return false
-    return JSON.parse(cart).some((game: GameDataType) => game.id === props.id)
-  })
+  const [inCart, setInCart] = useState<boolean>()
 
   const handleAddToCart = () => {
-    const cart = localStorage.getItem('cart')
+    const cart = window.localStorage.getItem('cart')
 
-    if (!cart) localStorage.setItem('cart', JSON.stringify([{ ...props }]))
+    if (!cart)
+      window.localStorage.setItem('cart', JSON.stringify([{ ...props }]))
     else {
       const parsedCart = JSON.parse(cart)
       if (!inCart) parsedCart.push({ ...props })
       else parsedCart.splice(parsedCart.indexOf(props.id), 1)
 
-      localStorage.setItem('cart', JSON.stringify(parsedCart))
+      window.localStorage.setItem('cart', JSON.stringify(parsedCart))
     }
 
     setInCart(!inCart)
   }
+
+  useEffect(() => {
+    const cart = window.localStorage.getItem('cart')
+
+    if (!cart) setInCart(false)
+    else
+      setInCart(
+        JSON.parse(cart).some((game: GameDataType) => game.id === props.id)
+      )
+  }, [props])
 
   return (
     <div className='w-full h-full rounded-xl border border-secondary-stroke p-6 flex flex-col justify-between gap-3'>

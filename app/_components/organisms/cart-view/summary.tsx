@@ -1,3 +1,5 @@
+'use client'
+
 // main tools
 import { useMemo, useState } from 'react'
 
@@ -28,7 +30,7 @@ export const Summary: FC<SummaryProps> = ({ cart, handleClearCart }) => {
     setLoading(true)
     await delay(1000)
 
-    localStorage.setItem('cart', JSON.stringify([]))
+    window.localStorage.setItem('cart', JSON.stringify([]))
     handleClearCart()
     setLoading(false)
     alert('Successfully Submitted')
