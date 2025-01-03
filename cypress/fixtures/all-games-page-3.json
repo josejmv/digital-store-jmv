@@ -1,0 +1,96 @@
+{
+    "totalPages": 3,
+    "currentPage": 3,
+    "games": [
+        {
+            "id": "21",
+            "genre": "Indie",
+            "image": "/game-images/celeste.jpeg",
+            "name": "Celeste",
+            "description": "Help Madeline survive her inner demons on her journey to the top of Celeste Mountain.",
+            "price": 19.99,
+            "isNew": false
+        },
+        {
+            "id": "22",
+            "genre": "Puzzle",
+            "image": "/game-images/tetris99.jpeg",
+            "name": "Tetris 99",
+            "description": "The iconic puzzle game Tetris with a 99-player battle royale twist.",
+            "price": 85.99,
+            "isNew": true
+        },
+        {
+            "id": "23",
+            "genre": "Battle Royale",
+            "image": "/game-images/freefire.jpeg",
+            "name": "Free Fire",
+            "description": "A fast-paced battle royale game where players fight to be the last one standing.",
+            "price": 60.99,
+            "isNew": false
+        },
+        {
+            "id": "24",
+            "genre": "Action",
+            "image": "/game-images/godofwar.jpeg",
+            "name": "God of War",
+            "description": "Kratos steps into the world of Norse gods in this critically acclaimed action game.",
+            "price": 49.99,
+            "isNew": false
+        },
+        {
+            "id": "25",
+            "genre": "Adventure",
+            "image": "/game-images/reddeadredemption2.jpeg",
+            "name": "Red Dead Redemption 2",
+            "description": "An epic tale of life in America at the dawn of the modern age.",
+            "price": 59.99,
+            "isNew": true
+        },
+        {
+            "id": "26",
+            "genre": "Horror",
+            "image": "/game-images/thelastofuspart2.jpeg",
+            "name": "The Last of Us Part II",
+            "description": "A complex, emotional story in a brutal post-pandemic world.",
+            "price": 59.99,
+            "isNew": false
+        },
+        {
+            "id": "27",
+            "genre": "Racing",
+            "image": "/game-images/mariokar8.jpeg",
+            "name": "Mario Kart 8 Deluxe",
+            "description": "The ultimate version of Mario Kart 8 with more racers, tracks, and features.",
+            "price": 59.99,
+            "isNew": true
+        },
+        {
+            "id": "28",
+            "genre": "Sports",
+            "image": "/game-images/nba2k21.jpeg",
+            "name": "NBA 2K21",
+            "description": "Experience the next generation of basketball simulation.",
+            "price": 59.99,
+            "isNew": false
+        },
+        {
+            "id": "29",
+            "genre": "MMORPG",
+            "image": "/game-images/guildwars2.jpeg",
+            "name": "Guild Wars 2",
+            "description": "A living, breathing online world where adventure awaits around every corner.",
+            "price": 70.0,
+            "isNew": true
+        },
+        {
+            "id": "30",
+            "genre": "Indie",
+            "image": "/game-images/amongus.jpeg",
+            "name": "Among Us",
+            "description": "An online multiplayer social deduction game set in a space-themed setting.",
+            "price": 45.0,
+            "isNew": false
+        }
+    ]
+}
