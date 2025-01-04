@@ -1,0 +1,13 @@
+{
+    "games": [
+        {
+            "id": "2",
+            "genre": "RPG",
+            "image": "/game-images/thewitcher3.jpeg",
+            "name": "The Witcher 3: Wild Hunt",
+            "description": "A story-driven, next-generation open world role-playing game.",
+            "price": 39.99,
+            "isNew": false
+        }
+    ]
+}

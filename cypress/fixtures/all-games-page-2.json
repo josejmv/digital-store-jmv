@@ -1,0 +1,96 @@
+{
+    "totalPages": 3,
+    "currentPage": 2,
+    "games": [
+        {
+            "id": "11",
+            "genre": "Puzzle",
+            "image": "/game-images/portal2.jpeg",
+            "name": "Portal 2",
+            "description": "A puzzle-platform game that challenges you with mind-bending puzzles.",
+            "price": 19.99,
+            "isNew": false
+        },
+        {
+            "id": "12",
+            "genre": "Horror",
+            "image": "/game-images/residentevil2.jpeg",
+            "name": "Resident Evil 2",
+            "description": "A survival horror game set in the aftermath of a deadly virus outbreak.",
+            "price": 59.99,
+            "isNew": false
+        },
+        {
+            "id": "13",
+            "genre": "Indie",
+            "image": "/game-images/hollowknight.jpeg",
+            "name": "Hollow Knight",
+            "description": "An action-adventure game set in a beautifully hand-drawn mysterious world.",
+            "price": 14.99,
+            "isNew": true
+        },
+        {
+            "id": "14",
+            "genre": "Action",
+            "image": "/game-images/sekiro.jpeg",
+            "name": "Sekiro: Shadows Die Twice",
+            "description": "A game where you seek revenge on your foes in late 1500s Sengoku Japan.",
+            "price": 59.99,
+            "isNew": true
+        },
+        {
+            "id": "15",
+            "genre": "Adventure",
+            "image": "/game-images/firewatch.jpeg",
+            "name": "Firewatch",
+            "description": "A single-player first-person mystery set in the Wyoming wilderness.",
+            "price": 19.99,
+            "isNew": false
+        },
+        {
+            "id": "16",
+            "genre": "Action-Adventure",
+            "image": "/game-images/assassinscreedvalhalla.jpeg",
+            "name": "Assassin's Creed Valhalla",
+            "description": "Live as a legendary Viking warrior raised on tales of battle and glory.",
+            "price": 59.99,
+            "isNew": true
+        },
+        {
+            "id": "17",
+            "genre": "RPG",
+            "image": "/game-images/finalfantasyxv.jpeg",
+            "name": "Final Fantasy XV",
+            "description": "Embark on an epic journey with your friends to reclaim your homeland.",
+            "price": 39.99,
+            "isNew": false
+        },
+        {
+            "id": "18",
+            "genre": "Shooter",
+            "image": "/game-images/callofdutywarzone.jpeg",
+            "name": "Call of Duty: Warzone",
+            "description": "A free-to-play battle royale game where you fight to be the last one standing.",
+            "price": 77.99,
+            "isNew": false
+        },
+        {
+            "id": "19",
+            "genre": "Strategy",
+            "image": "/game-images/ageofempiresII.jpeg",
+            "name": "Age of Empires II: Definitive Edition",
+            "description": "A classic strategy game remastered in full HD with new features.",
+            "price": 19.99,
+            "isNew": false
+        },
+        {
+            "id": "20",
+            "genre": "MOBA",
+            "image": "/game-images/leagueoflegends.jpeg",
+            "name": "League of Legends",
+            "description": "A fast-paced, competitive online game that blends the speed and intensity of an RTS with RPG elements.",
+            "price": 90.0,
+            "isNew": true
+        }
+    ]
+}
