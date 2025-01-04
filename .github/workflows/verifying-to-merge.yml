@@ -36,7 +36,7 @@ jobs:
           path: ./node_modules
           key: ${{ github.sha }}
           restore-keys: |
-        node-modules-
+            node-modules-
 
       - name: Cache cypress binary
         uses: actions/cache@v3
