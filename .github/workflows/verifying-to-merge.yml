@@ -26,7 +26,8 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        run: yarn install
+        if: steps.restore-node-modules.outputs.cache-hit != 'true'
+        run: npm install
 
       - name: Actions
         uses: actions/cache@v3
@@ -34,6 +35,8 @@ jobs:
         with:
           path: ./node_modules
           key: ${{ github.sha }}
+          restore-keys: |
+        node-modules-
 
       - name: Cache cypress binary
         uses: actions/cache@v3
@@ -66,7 +69,7 @@ jobs:
 
       - name: Running Lint
         run:
-          yarn lint
+          npm run lint
 
   build-projects:
     name: Run build
@@ -92,7 +95,7 @@ jobs:
 
       - name: Build projects
         run:
-          yarn build
+          npm run build
 
   run-cypress:
     name: "Run Cypress"
@@ -124,4 +127,4 @@ jobs:
           key: cypress-${{ github.sha }}
 
       - name: Run test
-        run: yarn test:run
+        run: npm run test:run
