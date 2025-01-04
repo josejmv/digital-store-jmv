@@ -2,7 +2,7 @@ import { cart } from '../fixtures/cart-games.json'
 
 describe('Cart Page', () => {
   beforeEach(() => {
-    cy.visit(`${Cypress.env('DOMAIN')}/cart`)
+    cy.visit('/cart')
 
     window.localStorage.setItem('cart', JSON.stringify(cart))
   })

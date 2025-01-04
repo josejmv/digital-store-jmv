@@ -1,6 +1,6 @@
 describe('Home Page', () => {
   beforeEach(() => {
-    cy.visit(Cypress.env('DOMAIN'))
+    cy.visit('/')
 
     cy.intercept('/api/genres', { fixture: 'genres.json' }).as('genres')
     cy.intercept('/api/games?page=1', { fixture: 'all-games-page-1.json' }).as(
