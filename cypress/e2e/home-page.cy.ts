@@ -1,7 +1,5 @@
 describe('Home Page', () => {
   beforeEach(() => {
-    cy.visit('/')
-
     cy.intercept('/api/genres', { fixture: 'genres.json' }).as('genres')
     cy.intercept('/api/games?page=1', { fixture: 'all-games-page-1.json' }).as(
       'allGamesPage1'
@@ -15,6 +13,8 @@ describe('Home Page', () => {
     cy.intercept('/api/games?page=1&genre=RPG', {
       fixture: 'rpg-games.json',
     }).as('rpgGames')
+
+    cy.visit('/')
   })
 
   it('First Render', () => {
