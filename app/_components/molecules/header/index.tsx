@@ -7,7 +7,7 @@ import type { FC } from 'react'
 
 export const Header: FC = () => (
   <header className='w-full bg-secondary flex justify-center'>
-    <section className='max-w-screen-xl w-full flex justify-between items-center px-2 py-4'>
+    <section className='max-w-screen-xl w-full flex justify-between items-center px-4 md:px-8 py-4'>
       <Link href='/'>
         <Image
           width={170}
